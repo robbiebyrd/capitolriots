@@ -1,0 +1,74 @@
+video {
+  max-height: 25rem;
+  max-width: 45rem;
+}
+
+#videos {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: stretch;
+  }
+
+#timekeeper {
+  position: absolute;
+  width: 100%;
+}
+
+#time-inner {
+  float: left;
+}
+
+#time-title, #time {
+  padding: 0;
+  margin: 0;
+}
+
+#controls-inner {
+  float: right;
+}
+
+.grid-item { 
+  padding: 1em;
+  border-radius: 2em;
+}
+
+.timeline-heat-item {
+  width: 0.2%;
+  height: 100%;
+  display: block;
+  float: left;
+}
+
+#timeline-heat-container-items, .timeline-heat-item {
+  height: 2em;
+}
+
+#timeline-heat-container-items {
+  clear: right;
+}
+
+#timeline-heat-container {
+  width: 23%;
+  padding-left: 50%;
+}
+
+.startupHelpText {
+  font-size: 3em;
+}
+
+#controls {
+  position: absolute;
+  bottom: 1em;
+  right: 2em;
+}
+
+#controls * button {
+  font-size: 1em;
+}
+
+.plyr--audio {
+  clear: both;
+}

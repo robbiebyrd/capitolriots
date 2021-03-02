@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Capitol Riots</title>
+
+	<link rel="stylesheet" href="capitolriots.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css">
+	<link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.1.0/mustache.min.js" integrity="sha512-HYiNpwSxYuji84SQbCU5m9kHEsRqwWypXgJMBtbRSumlx1iBB6QaxgEBZHSHEGM+fKyCX/3Kb5V5jeVXm0OglQ==" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js"></script>
+	<script src="https://cdn.plyr.io/3.6.4/plyr.js"></script>
+
+	<script src="js/memento.js"></script>
+
+</head>
+
+<body>
+
+	<div id="timeline-heat">
+		<audio controls id="timekeeper" class="handsoff" preload="auto">
+			<source src="https://capitolriots-frontend.s3.amazonaws.com/rsrc/out.mp3" type="audio/mpeg">
+			Your browser does not support the HTML audio element.
+		</audio>
+		<div id="time-inner">
+			<h3 id="time-title">January 6, 2021</h3>
+			<h1 id="time">12:00:00 AM ET</h1>
+		</div>
+		<div id="timeline-heat-container">
+			<div style="float: left;">12:00pm</div>
+			<div style="float: right;">5:40pm</div>
+			<div id="timeline-heat-container-items"></div>
+		</div>
+	</div>
+
+
+	<div id="video-holder">
+		<div id="videos" class="grid">
+			<h1 class="startupHelpText">FOR BEST RESULTS, PRESS THE LOAD BUTTON IN THE CONTROLS BELOW, THEN PRESS PLAY.</h1>
+		</div>
+	</div>
+
+	<div id="timeline-holder">
+		<div id="timeline"></div>
+	</div>
+
+	<div id="templates" class="hidden">
+		<script id="video_item_template" type="x-tmpl-mustache">
+				<video id="{{PlayerID}}" controls="false" preload="true" media_volume="{{Volume}}" poster="{{VideoPosterImage}}" class="grid-item">
+					<source src="{{VideoURL}}" type="{{Type}}">
+				</video>
+		</script>
+	</div>
+
+	<div id="controls">
+		<div class="inner">
+			<div id="controls-inner">
+				<button id="loadButton" class="ffrw" data-skip="43260">LOAD</button>
+				<button id="rewindButton2" class="ffrw" data-skip="-3600">-1HR</button>
+				<button id="rewindButton3" class="ffrw" data-skip="-300">-5MIN</button>
+				<button id="rewindButton4" class="ffrw" data-skip="-30">-30SEC</button>
+				<button id="playButton" class="command_button">PLAY</button>
+				<button id="pauseButton">PAUSE</button>
+				<button id="forwardButton1" class="ffrw" data-skip="30">+30SEC</button>
+				<button id="forwardButton2" class="ffrw" data-skip="300">+5MIN</button>
+				<button id="forwardButton3" class="ffrw" data-skip="3600">+1HR</button>
+				<button id="muteButton">MUTE</button>
+				<button id="unmuteButton">UNMUTE</button>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/main.js"></script>
+
+</body>
+</html>
